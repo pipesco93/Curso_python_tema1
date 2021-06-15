@@ -26,6 +26,6 @@ def run():
     for i in super_list:
         print(i)
 
-
+#inicialización de programa
 if __name__=='__main__':
     run()
