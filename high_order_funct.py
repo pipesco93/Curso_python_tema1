@@ -30,3 +30,4 @@ my_list3 = [2, 2, 2, 2, 2]
 all_multiplied = reduce(lambda a, b: a * b, my_list3)
 
 print(all_multiplied)
+print(type(all_multiplied))
