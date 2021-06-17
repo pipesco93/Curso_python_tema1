@@ -74,9 +74,22 @@ DATA = [
 
 def run():
     all_python_devs = [worker["name"] for worker in DATA if worker["language"] == "python"]
+    all_python_devs2 = list(filter(lambda worker2: worker2["language"] == "python",DATA))
+    all_python_devs2 = list(map(lambda worker2: worker2["name"], all_python_devs2))
+
+    all_platzi_workers = [worker["name"] for worker in DATA if worker ["organization"] == "Platzi"]
+
+    #si age es > 18 lambda = true y se almacena en lista 
+    adults = list(filter(lambda worker: worker["age"] > 18, DATA))
+    adults = list(map(lambda worker: worker["name"], adults))
+    # | pipe suma diccionarios fincion de python 3.9+
+    old_people = list(map(lambda worker: worker | {"old": worker["age"] > 70}, DATA))
 
     for worker in all_python_devs:
         print(worker)
+
+    for worker2 in all_python_devs2:
+        print(worker2)
 
 
 if __name__=='__main__':
