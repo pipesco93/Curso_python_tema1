@@ -4,6 +4,7 @@ def read():
         for line in f:
             numbers.append(int(line))
     print(numbers)
+    return 
 
 
 def write():
